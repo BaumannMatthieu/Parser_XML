@@ -8,4 +8,7 @@
 				<test attrib="sdfsd">dd fsdf fgg 87 gdsssd 5</test>
 			</tt>
 		</code>
+		<code sexe="masculin" type="sdfsd">
+			<test attrib="sdfsd" toto="titi">magic parser</test>
+		</code>
 </repertoire>

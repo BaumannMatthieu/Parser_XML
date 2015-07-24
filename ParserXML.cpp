@@ -32,7 +32,6 @@ namespace Parser
 
 			xml_file.close();
 		
-			std::cout << file_content;
 			/* We erase bad characters so that we can parse correcty the file */
 			erase_all_characters(file_content, '\n');		
 			erase_all_characters(file_content, '\t');		

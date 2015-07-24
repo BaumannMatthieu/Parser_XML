@@ -55,11 +55,9 @@ class Parser_Tree
 							return *it;
 						}
 					}
-				} else {
-					std::cerr << "This is the last node which the header is " << this->_header << std::endl;
 				}
 
-				std::cerr << "There is just one node which the header is " << this->_header << std::endl;
+				std::cerr << "There is no other node which the header is " << this->_header << std::endl;
 			} else {
 				std::cerr << "The node is the root so it has only one child." << std::endl;
 			}
@@ -75,6 +73,16 @@ class Parser_Tree
 		const std::string getData() 
 		{
 			return _data;
+		}
+
+		const std::string getAttribut(const std::string type) 
+		{
+			std::map< std::string, std::string >::iterator it = _attributs.find(type);
+			if(it != _attributs.end()) {
+				return it->second;
+			}
+
+			return "";
 		}
 
 		void addAttribut(const std::pair< std::string, std::string > attribut)
